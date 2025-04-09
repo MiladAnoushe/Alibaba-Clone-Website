@@ -8,19 +8,16 @@ window.addEventListener("scroll", function () {
   }
 });
 
-document.addEventListener("DOMContentLoaded", function() {
-  const ads = document.querySelectorAll('.ad-section > div');
-  let currentIndex = 0;
+var buttons = document.querySelectorAll(".navbar-dropdown-button");
 
-  ads.forEach((ad, index) => {
-    ad.style.display = (index === 0) ? "block" : "none";
+buttons.forEach(function(button) {
+  var dropdown = button.querySelector(".navbar-div-dropdown");
+
+  button.addEventListener("click", function() {
+    if (dropdown.style.display === "none" || dropdown.style.display === "") {
+      dropdown.style.display = "flex";
+    } else {
+      dropdown.style.display = "none";
+    }
   });
-
-  function changeAd() {
-    ads[currentIndex].style.display = "none";
-    currentIndex = (currentIndex + 1) % ads.length;
-    ads[currentIndex].style.display = "block";
-  }
-  
-  setInterval(changeAd, 4000);
 });
