@@ -104,7 +104,6 @@ body {
   transition: transform 0.3s;
 }
 
-
 .navbar-dropdown-button {
   display: flex;
   border: 1px solid rgb(226, 226, 226);
@@ -225,7 +224,7 @@ body {
 
 .desktop-bg-img {
   max-width: 1200px;
-  width: 110vh;
+  width: 170vh;
   border-radius: 50px;
   margin-top: 70px;
 }
@@ -265,19 +264,31 @@ body {
   flex: 1;
 }
 
-.desktop-navbar-services a:focus {
-  border-bottom: 3px rgb(46, 130, 204) solid;
-  color: rgb(46, 130, 204);
+.desktop-navbar-services a svg {
+  width: 30px;
+}
+
+.item {
+  padding: 10px;
+  text-decoration: none;
+  color: black;
+}
+
+.underline {
+  position: absolute;
+  top: 80px;
+  height: 4px;
+  background: rgb(46, 130, 204);
+  transition: 0.3s;
+}
+
+.desktop-navbar-services .active-tab {
+  color: #2e82cc;
   font-weight: 600;
 }
 
-.desktop-navbar-services a:focus svg {
+.desktop-navbar-services .active-tab svg {
   fill: rgb(46, 130, 204);
-  border: rgb(46, 130, 204);
-}
-
-.desktop-navbar-services a svg {
-  width: 30px;
 }
 
 /* ------------------ desktop - navbar - details ------------------ */
@@ -391,7 +402,7 @@ body {
 
 .switch-button {
   position: absolute;
-  right: 123px;
+  right: 123.5px;
   top: 4px;
   border-radius: 50%;
   display: flex;
@@ -453,7 +464,7 @@ body {
 .departure-date {
   position: absolute;
   right: -5px;
-  top: 8px;
+  top: 9px;
   font-size: 0.75rem;
   margin: 0 15px;
   color: rgb(105, 157, 181);
@@ -469,7 +480,7 @@ body {
 .return-date {
   position: absolute;
   right: -8px;
-  top: 8px;
+  top: 9px;
   font-size: 0.75rem;
   color: rgb(105, 157, 181);
   margin: 0 15px;
@@ -484,18 +495,21 @@ body {
 
 .trip-date-container1 input:focus+.departure-date {
   transform: translate(15px, -25px);
-  scale: 0.7;
+  scale: 0.85;
   padding: 0 3px;
 }
 
 .trip-date-container2 input:focus+.return-date {
   transform: translate(15px, -25px);
-  scale: 0.7;
+  scale: 0.85;
   padding: 0 3px;
 }
 
 .passengers-container {
   position: relative;
+  display: flex;
+  justify-content: space-evenly;
+  gap: 5px;
 }
 
 .passengers-container input {
@@ -1060,11 +1074,17 @@ body {
 .footer-links summary {
   cursor: pointer;
   display: flex;
+  transition: 0.3s;
 }
 
 .footer-links summary span {
   margin-right: 20px;
   color: rgb(0, 162, 255);
+  transition: 0.3s;
+}
+
+.footer-links summary span:hover{
+  color: #fdb713;
 }
 
 .footer-links details {
@@ -1209,7 +1229,7 @@ body {
   box-sizing: border-box;
 }
 
-.footer-desktop-grid ul li a:hover{
+.footer-desktop-grid ul li a:hover {
   color: red;
 }
 
@@ -1251,14 +1271,14 @@ body {
   gap: 20px;
 }
 
-.contact-desktop-footer-sub p{
+.contact-desktop-footer-sub p {
   justify-content: space-evenly;
   display: flex;
   width: 100%;
   font-size: 0.9rem;
 }
 
-.pics-desktop-footer img{
+.pics-desktop-footer img {
   width: 65px;
   border-radius: 10px;
   border: 1px solid rgb(214, 214, 214);
@@ -1269,6 +1289,14 @@ body {
   flex-direction: row-reverse;
   flex-wrap: wrap;
   gap: 0 10px;
+}
+
+.summary-more:hover{
+  color: #00f815;
+}
+
+.summary-more:active{
+  opacity: 0.5;
 }
 
 
@@ -1315,7 +1343,7 @@ body {
   color: red;
 }
 
-.footer-links-details-desktop{
+.footer-links-details-desktop {
   padding: 20px 0;
 }
 
@@ -1327,11 +1355,11 @@ body {
   padding-bottom: 30px;
 }
 
-.footer-discription-desktop{
+.footer-discription-desktop {
   flex: 3;
 }
 
-.footer-discription-desktop p{
+.footer-discription-desktop p {
   font-size: 0.7rem;
   color: gray;
   text-align: center;
@@ -1353,11 +1381,11 @@ body {
   scale: 1.2;
 }
 
-.social-links-desktop img{
+.social-links-desktop img {
   width: 70%;
 }
 
-.footer-contant-social-desktop{
+.footer-contant-social-desktop {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -1367,80 +1395,12 @@ body {
   color: blue;
 }
 
-.footer-contant-social-desktop{
+.footer-contant-social-desktop {
   font-size: 0.8rem;
   gap: 20px;
 }
 
 /* -------------------------- Media Query --------------------------- */
-
-
-@media (min-width: 750px) {
-  .header-container {
-    display: none;
-  }
-
-  .main {
-    margin-top: 175px;
-  }
-
-  .header-container.scrolled+.main {
-    margin-top: 180px;
-  }
-
-  .bottom-tab-bar {
-    display: none;
-  }
-
-  .other-services-link a {
-    flex-direction: row;
-  }
-
-  .ad2 {
-    display: flex;
-  }
-
-  .app-ads-container {
-    height: 200px;
-    justify-content: space-evenly;
-    gap: 50px;
-  }
-
-  .app-ads-text button {
-    display: none;
-  }
-
-  .app-ads-text {
-    width: fit-content;
-    height: fit-content;
-  }
-
-  .app-ads-img img {
-    width: 200px;
-    height: 170px;
-  }
-
-  .footer-services {
-    border-bottom: 1px solid rgb(198, 198, 198);
-  }
-
-  .footer-services ul {
-    flex-direction: row;
-    gap: 30px;
-  }
-
-  .footer-summary {
-    justify-content: space-evenly;
-  }
-
-  .footer-details-content ul {
-    align-items: center;
-  }
-
-  .footer-mobile {
-    display: none;
-  }
-}
 
 @media (max-width: 750px) {
   .header-container-desktop {
@@ -1470,31 +1430,222 @@ body {
 
 }
 
+@media (min-width: 750px) {
 
-@media (max-width: 850px) {
-  .top-navbar-services {
+  .header-container {
     display: none;
   }
 
-}
+  .main {
+    margin-top: 175px;
+  }
 
-@media (min-width: 850px) {
+  .header-container.scrolled+.main {
+    margin-top: 180px;
+  }
+
+  .other-services-link a {
+    flex-direction: row;
+  }
+
+  .bottom-tab-bar {
+    display: none;
+  }
+
   .main-summary {
     grid-template-columns: 0.5fr 3fr 0.5fr;
+  }
+
+  .app-ads-container {
+    height: 200px;
+    justify-content: space-evenly;
+    gap: 50px;
+  }
+
+  .app-ads-text button {
+    display: none;
+  }
+
+  .app-ads-text {
+    width: fit-content;
+    height: fit-content;
+  }
+
+  .app-ads-img img {
+    width: 200px;
+    height: 170px;
   }
 
   .summary-img-container {
     justify-self: center;
   }
 
-
   .summary-down-icon {
     justify-self: flex-start;
   }
+
+  .footer-services {
+    border-bottom: 1px solid rgb(198, 198, 198);
+  }
+
+  .footer-services ul {
+    flex-direction: row;
+    gap: 30px;
+  }
+
+  .footer-summary {
+    justify-content: space-evenly;
+  }
+
+  .footer-details-content ul {
+    align-items: center;
+  }
+
+  .footer-mobile {
+    display: none;
+  }
+}
+
+@media (min-width: 750px) and (max-width: 850px) {
+  .ad2 {
+    display: flex;
+  }
+
+  .top-navbar-services {
+    display: none;
+  }
+
+}
+
+@media (min-width: 850px) and (max-width: 1000px) {
+
+  .ad2 {
+    display: flex;
+  }
+
+  .navbar-city-input1 input {
+    width: 120px;
+  }
+
+  .navbar-city-input2 input {
+    width: 120px;
+  }
+
+  .trip-date-container1 input {
+    width: 70px;
+  }
+
+  .trip-date-container2 input {
+    width: 70px;
+  }
+
+  .switch-button {
+    right: 148px;
+  }
+
+  .departure-date {
+    right: 6px;
+  }
+
+  .return-date {
+    right: 0px;
+  }
+}
+
+@media (min-width: 1000px) and (max-width: 1200px) {
+  .ad2 {
+    display: flex;
+  }
+
+  .ad3 {
+    display: flex;
+  }
+
+  .navbar-city-input1 input {
+    width: 150px;
+  }
+
+  .navbar-city-input2 input {
+    width: 150px;
+  }
+
+  .trip-date-container1 input {
+    width: 95px;
+  }
+
+  .trip-date-container2 input {
+    width: 95px;
+  }
+
+  .switch-button {
+    right: 178px;
+  }
+
+  .departure-date {
+    right: 7px;
+    padding: 0 25px;
+  }
+
+  .return-date {
+    right:7px;
+    padding: 0 15px;
+  }
+
+  .passengers-container {
+    width: 33vh;
+  }
+  .passengers-text {
+    right: 20px;
+  }
+
 }
 
 @media (min-width: 1200px) {
   .ad3 {
     display: flex;
+  }
+
+  .ad2 {
+    display: flex;
+  }
+
+  .navbar-city-input1 input {
+    width: 150px;
+  }
+
+  .navbar-city-input2 input {
+    width: 150px;
+  }
+
+  .trip-date-container1 input {
+
+    width: 95px;
+  }
+
+  .trip-date-container2 input {
+
+    width: 95px;
+  }
+
+  .switch-button {
+    right: 178px;
+  }
+
+  .departure-date {
+    right: 3px;
+    padding: 0 25px;
+  }
+
+  .return-date {
+    right:7px;
+    padding: 0 15px;
+  }
+
+  .passengers-container {
+    width: 33vh;
+  }
+
+  .passengers-text {
+    right: 20px;
   }
 }

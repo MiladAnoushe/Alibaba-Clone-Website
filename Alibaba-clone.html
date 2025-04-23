@@ -5,8 +5,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Alibaba</title>
-  <link rel="stylesheet" href="Alibaba-stylesheet.css">
-  <script src="Alibaba-js.js" defer></script>
+  <link rel="stylesheet" href="./style.css">
+  <script src="script.js" defer></script>
 </head>
 
 
@@ -88,8 +88,9 @@
       <nav class="desktop-navbar-container">
 
         <div class="desktop-main-navbar">
+
           <div class="desktop-navbar-services">
-            <a href="#">
+            <a class="item active-tab" href="#">
               <svg xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
                 width="36" height="36" fill="rgb(59, 59, 59)" class="block mx-auto mb-1" data-v-ab7fff4c="">
                 <path
@@ -98,7 +99,7 @@
               </svg>
               <span>پرواز داخلی</span>
             </a>
-            <a href="#">
+            <a class="item" href="#">
               <svg xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
                 width="36" height="36" fill="rgb(59, 59, 59)" class="block mx-auto mb-1" data-v-ab7fff4c="">
                 <path
@@ -107,7 +108,7 @@
               </svg>
               <span>پرواز خارجی</span>
             </a>
-            <a href="#">
+            <a class="item" href="#">
               <svg xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
                 width="28" fill="rgb(59, 59, 59)" class="product-tabs__icon" data-v-3a3548f4="" height="28">
                 <path
@@ -116,7 +117,7 @@
               </svg>
               <span>قطار</span>
             </a>
-            <a href="#">
+            <a class="item" href="#">
               <svg xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
                 width="28" fill="جدید" class="product-tabs__icon" data-v-3a3548f4="" height="28">
                 <path
@@ -125,7 +126,7 @@
               </svg>
               <span>اتوبوس</span>
             </a>
-            <a href="#">
+            <a class="item" href="#">
               <svg xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
                 width="28" fill="rgb(59, 59, 59)" class="product-tabs__icon" data-v-3a3548f4="" height="28">
                 <path
@@ -134,7 +135,7 @@
               </svg>
               <span>تور</span>
             </a>
-            <a href="#">
+            <a class="item" href="#">
               <svg xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
                 width="28" fill="rgb(59, 59, 59)" class="product-tabs__icon" data-v-3a3548f4="" height="28">
                 <path
@@ -143,7 +144,7 @@
               </svg>
               <span>هتل</span>
             </a>
-            <a href="#">
+            <a class="item" href="#">
               <svg xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
                 width="28" fill="rgb(59, 59, 59)" class="product-tabs__icon" data-v-3a3548f4="" height="28">
                 <path
@@ -155,6 +156,9 @@
               </svg>
               <span>ویلا و اقامتگاه</span>
             </a>
+
+            <span class="underline"></span>
+
           </div>
 
           <div class="desktop-services-details">
@@ -555,6 +559,39 @@
 
     </main>
   </div>
+
+  <div class="bottom-tab-bar">
+    <a href="">
+      <div>
+        <img src="./img/bottom-tab-bar/home.svg" alt="">
+        <span>خانه</span>
+      </div>
+    </a>
+    <a href="">
+      <div>
+        <img src="./img/bottom-tab-bar/plus.svg" alt="">
+        <span>پلاس</span>
+      </div>
+    </a>
+    <a href="">
+      <div>
+        <img src="./img/bottom-tab-bar/my-trip.svg" alt="">
+        <span>سفرهای من</span>
+      </div>
+    </a>
+    <a href="">
+      <div>
+        <img src="./img/bottom-tab-bar/notification.svg" alt="">
+        <span>اعلان‌ها</span>
+      </div>
+    </a>
+    <a href="">
+      <div>
+        <img src="./img/bottom-tab-bar/account.svg" alt="">
+        <span>حساب کاربری</span>
+      </div>
+    </a>
+  </div>
 </body>
 <footer class="footer">
   <div class="footer-container">
@@ -654,7 +691,7 @@
             <li><a href="#">تور کیش</a></li>
             <li><a href="#">تور استانبول</a></li>
             <li><a href="#">بلیط قطار</a></li>
-            <span>بیشتر ...</span>
+            <span class="summary-more">بیشتر ...</span>
             <img src="./img/dropdown-icon.svg" alt="">
           </ul>
         </summary>
@@ -849,38 +886,5 @@
     </div>
   </div>
 </footer>
-
-<div class="bottom-tab-bar">
-  <a href="">
-    <div>
-      <img src="./img/bottom-tab-bar/home.svg" alt="">
-      <span>خانه</span>
-    </div>
-  </a>
-  <a href="">
-    <div>
-      <img src="./img/bottom-tab-bar/plus.svg" alt="">
-      <span>پلاس</span>
-    </div>
-  </a>
-  <a href="">
-    <div>
-      <img src="./img/bottom-tab-bar/my-trip.svg" alt="">
-      <span>سفرهای من</span>
-    </div>
-  </a>
-  <a href="">
-    <div>
-      <img src="./img/bottom-tab-bar/notification.svg" alt="">
-      <span>اعلان‌ها</span>
-    </div>
-  </a>
-  <a href="">
-    <div>
-      <img src="./img/bottom-tab-bar/account.svg" alt="">
-      <span>حساب کاربری</span>
-    </div>
-  </a>
-</div>
 
 </html>
