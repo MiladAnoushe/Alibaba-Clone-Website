@@ -38,7 +38,7 @@ document.addEventListener("DOMContentLoaded", () => {
       e.preventDefault();
 
       items.forEach(x => x.classList.remove("active-tab"));
-      
+
       i.classList.add("active-tab");
 
       moveUnderline(i);
@@ -47,7 +47,3 @@ document.addEventListener("DOMContentLoaded", () => {
 
   moveUnderline(container.querySelector(".active-tab"));
 });
-
-
-
-
