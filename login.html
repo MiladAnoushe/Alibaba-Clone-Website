@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login</title>
+  <link rel="stylesheet" href="loginCss.css">
+</head>
+<body dir="rtl">
+  <section class="main-section">
+    <header class="login-header">
+      <img class="alibaba-logo" src="./img/desktop-logo-yellow.svg" alt="">
+      <span>
+        ورود یا ثبت نام
+      </span>
+    </header>
+
+    <main class="main">
+      <form action="server.php">        
+        <label class="form-label" for="number">
+          برای ادامه شماره موبایل خود را وارد کنید:
+        </label>
+        <input id="number" class="number-inset" type="tel" name="phone" required>
+        <span class="d-place-holder">
+          شماره موبایل
+        </span>
+        <span dir="ltr" class="pish-num">
+          +98
+        </span>
+      </form>
+      <p class="reminder-p">
+        <img class="exclamation-icon" src="./img/icons8-exclamation-mark-50.png" alt="">
+        استفاده از علی بابا به معنی پذیرش <a href="#">قوانین و مقررات</a> این سرویس است.
+      </p>
+    </main>
+    
+    <footer>
+      <button class="submit-btn" type="submit">تایید و دریافت کد</button>
+      <a class="login-pass-link" href="#">ورود با کلمه عبور</a>
+      <span class="footer-creator">
+        Designed By Milad Anoushe
+      </span>
+    </footer>
+    
+  </section>
+</body>
+</html>

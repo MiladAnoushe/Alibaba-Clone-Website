@@ -1,0 +1,223 @@
+@font-face {
+  font-family: Alibaba;
+  font-style: normal;
+  font-weight: 900;
+  src: url('fonts/eot/Alibaba-Black.eot');
+  src: url('fonts/eot/Alibaba-Black.eot?#iefix') format('embedded-opentype'),
+    url('fonts/woff2/Alibaba-Black.woff2') format('woff2'),
+    url('fonts/woff/Alibaba-Black.woff') format('woff'),
+    url('fonts/ttf/Alibaba-Black.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: Alibaba;
+  font-style: normal;
+  font-weight: bold;
+  src: url('fonts/eot/Alibaba-Bold.eot');
+  src: url('fonts/eot/Alibaba-Bold.eot?#iefix') format('embedded-opentype'),
+    url('fonts/woff2/Alibaba-Bold.woff2') format('woff2'),
+    url('fonts/woff/Alibaba-Bold.woff') format('woff'),
+    url('fonts/ttf/Alibaba-Bold.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: Alibaba;
+  font-style: normal;
+  font-weight: 300;
+  src: url('fonts/eot/Alibaba-Light.eot');
+  src: url('fonts/eot/Alibaba-Light.eot?#iefix') format('embedded-opentype'),
+    url('fonts/woff2/Alibaba-Light.woff2') format('woff2'),
+    url('fonts/woff/Alibaba-Light.woff') format('woff'),
+    url('fonts/ttf/Alibaba-Light.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: Alibaba;
+  font-style: normal;
+  font-weight: normal;
+  src: url('fonts/eot/Alibaba-Regular.eot');
+  src: url('fonts/eot/Alibaba-Regular.eot?#iefix') format('embedded-opentype'),
+    url('fonts/woff2/Alibaba-Regular.woff2') format('woff2'),
+    url('fonts/woff/Alibaba-Regular.woff') format('woff'),
+    url('fonts/ttf/Alibaba-Regular.ttf') format('truetype');
+}
+
+:root {
+  --main-color: #fdb713;
+  --sec-main-color: rgb(7, 133, 152);
+}
+
+* {
+  font-family: alibaba;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  justify-content: center;
+  display: flex;
+  background-color: #e0e5ec;
+}
+
+.main {
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+}
+
+.main-section {
+  max-width: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 5vh;
+  padding: 10px;
+}
+
+.login-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  gap: 3vh;
+}
+
+.alibaba-logo {
+  width: 170px;
+}
+
+.login-header span {
+  font-weight: 600;
+  font-size: 1.2rem;
+  color: #33496b;
+}
+
+.main {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 5vh;
+}
+
+form {
+  width: 100%;
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  padding: 10px;
+  box-sizing: border-box;
+  border-radius: 10px;
+  position: relative;
+}
+
+.form-label {
+  display: inline;
+  width: 100%;
+  font-size: 0.8rem;
+  text-align: start;
+  color: #467ea6;
+  font-weight: 600;
+}
+
+#number {
+  max-width: 100%;
+  width: 100%;
+  padding: 10px 5px 10px 80px;
+  box-sizing: border-box;
+  color: #5d6b80;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  box-shadow:10px 10px 20px #a3b1c6,-10px -10px 20px #ffffff;
+  font-size: 0.9rem;
+}
+
+.number-inset{
+  background-color: #e0e5ec;
+  box-shadow: inset 10px 10px 20px #a3b1c6 , inset -10px -10px 20px #ffffff;
+}
+
+.pish-num{
+  padding: 0 12px;
+  border-right: 2px solid #a3b1c6;
+  color: #5d6b80;
+  position: absolute;
+  left: 25px;
+  top: 54px;
+  font-size: 0.9rem;
+}
+
+.d-place-holder{
+  font-size: 0.9rem;
+  position: absolute;
+  top: 53px;
+  color:#5d6b80;
+  right: 105px;
+  pointer-events: none;
+  transition: all 0.3s;
+}
+
+.number-inset:focus + .d-place-holder{
+  top: 35px;
+  right: 25px;
+  font-size: 0.7rem;
+}
+
+.reminder-p{
+  margin-top: 20px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 0.7rem;
+  white-space: nowrap;
+  color: #467ea6;
+}
+
+.reminder-p a {
+  white-space: nowrap;
+  text-decoration: none;
+  color: rgb(10, 110, 164);
+  font-weight: 600;
+  
+}
+
+.exclamation-icon {
+  width: 15px;
+}
+
+footer {
+  width: 100%;
+  position: relative;
+  bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.submit-btn {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 12px;
+  border-radius: 10px;
+  border: none;
+  background-color: rgb(165, 208, 232);
+  color: white;
+  font-weight: 600;
+}
+
+.login-pass-link {
+  text-decoration: none;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: rgb(10, 110, 164);
+}
+
+.footer-creator {
+  font-size: 0.8rem;
+  margin-top: 20px;
+  color: #467ea6;
+}
